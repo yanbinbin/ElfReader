@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-project(ElfFileParser)
+project(ElfReader)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -8,7 +8,7 @@ include_directories(file)
 include_directories(type)
 include_directories(util)
 
-add_executable(ElfFileParser
+add_executable(ElfReader
         file/arm64-v8a/foo.o
         file/arm64-v8a/libfoo.so
         file/armeabi-v7a/foo.o
@@ -20,7 +20,6 @@ add_executable(ElfFileParser
         util/Formatter.h
         util/Printer.cpp
         util/Printer.h
-        CMakeLists.txt
         ElfFileParser.cpp
         ElfParser.cpp
         ElfParser.h)
